@@ -25,6 +25,11 @@ This tutorial provides a quick introduction to using current integration/presto 
 [Presto Single Node Setup for Carbondata](#presto-single-node-setup-for-carbondata)
 
 [Presto Setup with CarbonData Distributed IndexServer](#presto-setup-with-carbondata-distributed-indexserver)
+## Presto SQL is now Trino
+
+⚠️ PrestoSQL is rename as Trino. The software and the community you have come to love and depend on aren’t going anywhere, we are simply renaming. Trino is the new name for PrestoSQL, the project supported by the founders and creators of Presto® along with the major contributors – just under a shiny new name. And now you can find us here:
+
+GitHub: https://github.com/trinodb/trino. 
 
 ## Presto Multinode Cluster Setup for Carbondata
 ### Installing Presto
@@ -183,7 +188,7 @@ Now you can use the Presto CLI on the coordinator to query data sources in the c
 
 ### Config presto server
 * Download presto server (316 is suggested and supported) : https://repo1.maven.org/maven2/io/prestosql/presto-server/
-* Finish presto configuration following https://prestosql.io/docs/current/installation/deployment.html.
+* Finish presto configuration following https://github.com/trinodb/trino/blob/316/presto-docs/src/main/sphinx/installation/deployment.rst.
   A configuration example:
   
  **config.properties**
@@ -261,7 +266,7 @@ Now you can use the Presto CLI on the coordinator to query data sources in the c
   hive.metastore.uri=thrift://<host>:<port>
   ```
   Carbondata becomes one of the supported format of presto hive plugin, so the configurations and setup is similar to hive connector of presto.
-  Please refer <a>https://prestosql.io/docs/current/connector/hive.html</a> for more details.
+  Please refer <a>https://github.com/trinodb/trino/blob/316/presto-docs/src/main/sphinx/connector/hive.rst</a> for more details.
   
   **Note**: Since carbon can work only with hive metastore, it is necessary that spark also connects to same metastore db for creating tables and updating tables.
   All the operations done on spark will be reflected in presto immediately. 
@@ -280,7 +285,7 @@ Now you can use the Presto CLI on the coordinator to query data sources in the c
     hive.s3.endpoint={value}
    ```
    
-   Please refer <a>https://prestosql.io/docs/current/connector/hive.html</a> for more details on S3 integration.
+   Please refer <a>https://github.com/trinodb/trino/blob/316/presto-docs/src/main/sphinx/connector/hive.rst</a> for more details on S3 integration.
     
 ### Generate CarbonData file
 
